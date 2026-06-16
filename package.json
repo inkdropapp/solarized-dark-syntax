@@ -4,9 +4,10 @@
   "description": "Solarlized Dark",
   "theme": "syntax",
   "styleSheets": [
+    "tokens.css",
     "index.css"
   ],
   "engines": {
-    "inkdrop": "^5.x"
+    "inkdrop": "^6.x"
   }
 }
