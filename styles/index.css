@@ -8,7 +8,7 @@
   --editor-background-color: var(--color-neutral-900); /* base04 */
   --editor-caret-color: var(--color-neutral-300); /* base0 */
   --editor-selection-background: var(--color-neutral-700); /* base02 */
-  --editor-focused-selection-background: var(--color-neutral-700);
+  --editor-focused-selection-background: hsl(var(--hsl-blue-500) / 30%);
   --editor-active-line-background-color: hsl(
     var(--hsl-neutral-800) / 50%
   ); /* base03 */
