@@ -4,7 +4,7 @@
 
 :root {
   /*── Editor chrome ────────────────────────────────────────────────────────*/
-  --editor-foreground-color: var(--color-neutral-300); /* base0 */
+  --editor-foreground-color: var(--color-neutral-400);
   --editor-background-color: var(--color-neutral-900); /* base04 */
   --editor-caret-color: var(--color-neutral-300); /* base0 */
   --editor-selection-background: var(--color-neutral-700); /* base02 */
@@ -258,7 +258,7 @@
 
   /* emphasis variants --------------------------------------------------*/
   .tok-strong {
-    color: var(--color-neutral-100); /* base2 */
+    color: var(--color-neutral-200);
     font-weight: bold;
   }
   .tok-emphasis {
