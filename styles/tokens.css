@@ -1,3 +1,7 @@
+/**
+ * Design token overrides for the Solarized theme.
+ * See the built-in design tokens here: https://github.com/inkdropapp/css/blob/main/tokens.css
+ */
 .cm-editor,
 .mde-preview .codeblock {
   /* Neutral ramp — Solarized base scale */
