@@ -1,12 +1,19 @@
 {
   "version": "2.0.0",
   "name": "solarized-dark-syntax",
-  "description": "Solarlized Dark",
+  "description": "Solarlized Dark syntax theme for Inkdrop",
   "theme": "syntax",
   "styleSheets": [
     "tokens.css",
     "index.css"
   ],
+  "keywords": [
+    "inkdrop",
+    "markdown"
+  ],
+  "repository": "https://github.com/inkdropapp/solarized-dark-syntax",
+  "author": "Takuya Matsuyama<t@inkdrop.app>",
+  "license": "MIT",
   "engines": {
     "inkdrop": "^6.x"
   }
