@@ -18,7 +18,7 @@
     "prepublishOnly": "./node_modules/.bin/generate-palette"
   },
   "devDependencies": {
-    "@inkdropapp/theme-dev-helpers": "^0.5.0"
+    "@inkdropapp/theme-dev-helpers": "^0.5.1"
   },
   "engines": {
     "inkdrop": "^6.x"
