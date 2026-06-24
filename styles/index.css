@@ -93,6 +93,7 @@
   --md-inline-code-border-color: hsl(var(--hsl-neutral-600) / 50%);
   --md-inline-code-border-width: 1px;
   --md-inline-code-background-color: hsl(var(--hsl-neutral-600) / 30%);
+  --md-codeblock-color: var(--editor-foreground-color);
   --md-codeblock-border-color: var(--color-neutral-700);
   --md-codeblock-border-width: 1px;
   --md-codeblock-background-color: hsl(var(--hsl-neutral-800) / 40%);
@@ -106,209 +107,145 @@
   --md-table-background-color: hsl(var(--hsl-neutral-800) / 40%);
 
   --md-blockquote-border-color: var(--color-neutral-600);
-}
 
-/*============================================================================
-  Syntax colours (Lezer highlight classes produced by the tokenHighlighter)
-  ===========================================================================*/
-.cm-editor,
-.mde-preview .codeblock {
-  /* keywords -----------------------------------------------------------*/
-  .tok-keyword,
-  .tok-operator-keyword,
-  .tok-module-keyword,
-  .tok-definition-keyword,
-  .tok-control-keyword {
-    color: var(--color-green-500);
-  }
+  --md-list-mark-color: var(--color-green-500);
+  --md-task-marker-font-weight: bold;
 
-  /* property, macro & std names ---------------------------------------*/
-  .tok-name,
-  .tok-property-name,
-  .tok-macro-name,
-  .tok-name.tok-standard {
-    color: var(--color-cyan-500);
-  }
+  /* Comments — base01, italic */
+  --syntax-comment-color: var(--color-neutral-600);
+  --syntax-comment-font-style: italic;
+  --syntax-line-comment-color: var(--syntax-comment-color);
+  --syntax-line-comment-font-style: var(--syntax-comment-font-style);
+  --syntax-block-comment-color: var(--syntax-comment-color);
+  --syntax-block-comment-font-style: var(--syntax-comment-font-style);
+  --syntax-doc-comment-color: var(--syntax-comment-color);
+  --syntax-doc-comment-font-style: var(--syntax-comment-font-style);
 
-  /* variable names -----------------------------------------------------*/
-  .tok-variable-name {
-    color: var(--color-neutral-500); /* base00 */
-  }
+  /* Names — property/std names cyan, definitions blue, constants magenta */
+  --syntax-name-color: var(--color-cyan-500);
+  --syntax-name-constant-color: var(--color-pink-500);
+  --syntax-name-standard-color: var(--syntax-name-color);
+  --syntax-name-definition-color: var(--color-blue-500);
+  --syntax-name-function-color: var(--syntax-name-color);
+  --syntax-name-special-color: var(--syntax-name-color);
+  --syntax-name-local-color: var(--syntax-name-color);
 
-  /* function identifiers, calls & definitions -------------------------*/
-  .tok-variable-name.tok-function,
-  .tok-name.tok-definition {
-    color: var(--color-blue-500);
-  }
+  /* Variable names — base00, functions blue, specials magenta */
+  --syntax-variable-name-color: var(--color-neutral-500);
+  --syntax-variable-name-constant-color: var(--syntax-variable-name-color);
+  --syntax-variable-name-standard-color: var(--syntax-variable-name-color);
+  --syntax-variable-name-definition-color: var(--syntax-variable-name-color);
+  --syntax-variable-name-function-color: var(--color-blue-500);
+  --syntax-variable-name-special-color: var(--color-pink-500);
+  --syntax-variable-name-local-color: var(--syntax-variable-name-color);
 
-  /* labels, namespaces, modifiers, self, constants --------------------*/
-  .tok-label-name,
-  .tok-namespace,
-  .tok-modifier,
-  .tok-self,
-  .tok-color,
-  .tok-name.tok-constant {
-    color: var(--color-pink-500); /* magenta */
-  }
+  /* Property names — cyan */
+  --syntax-property-name-color: var(--color-cyan-500);
+  --syntax-property-name-constant-color: var(--syntax-property-name-color);
+  --syntax-property-name-standard-color: var(--syntax-property-name-color);
+  --syntax-property-name-definition-color: var(--syntax-property-name-color);
+  --syntax-property-name-function-color: var(--syntax-property-name-color);
+  --syntax-property-name-special-color: var(--syntax-property-name-color);
+  --syntax-property-name-local-color: var(--syntax-property-name-color);
 
-  /* numbers ------------------------------------------------------------*/
-  .tok-number {
-    color: var(--color-pink-500);
-  }
+  /* Other names */
+  --syntax-tag-name-color: var(--color-blue-500);
+  --syntax-attribute-name-color: var(--color-cyan-500);
+  --syntax-class-name-color: var(--color-orange-500);
+  --syntax-label-name-color: var(--color-pink-500);
+  --syntax-namespace-color: var(--color-pink-500);
+  --syntax-macro-name-color: var(--syntax-name-color);
 
-  /* atoms, booleans, special vars -------------------------------------*/
-  .tok-atom,
-  .tok-bool,
-  .tok-variable-name.tok-special {
-    color: var(--color-pink-500);
-  }
+  /* Strings & regexps — yellow */
+  --syntax-string-color: var(--color-yellow-500);
+  --syntax-string-special-color: var(--syntax-string-color);
+  --syntax-string-constant-color: var(--syntax-string-color);
+  --syntax-string-standard-color: var(--syntax-string-color);
 
-  /* type & class names -------------------------------------------------*/
-  .tok-type-name,
-  .tok-class-name {
-    color: var(--color-orange-500);
-  }
+  /* Numbers & literals */
+  --syntax-number-color: var(--color-pink-500);
+  --syntax-literal-color: var(--editor-foreground-color);
+  --syntax-character-color: var(--color-yellow-500);
+  --syntax-integer-color: var(--editor-foreground-color);
+  --syntax-float-color: var(--editor-foreground-color);
+  --syntax-bool-color: var(--color-pink-500);
+  --syntax-regexp-color: var(--syntax-string-color);
+  --syntax-color-color: var(--color-pink-500);
+  --syntax-url-color: var(--color-yellow-500);
+  --syntax-attribute-value-color: var(--editor-foreground-color);
 
-  /* annotations --------------------------------------------------------*/
-  .tok-annotation {
-    color: var(--color-orange-500);
-  }
+  /* Keywords — green */
+  --syntax-self-color: var(--color-pink-500);
+  --syntax-null-color: var(--editor-foreground-color);
+  --syntax-atom-color: var(--color-pink-500);
+  --syntax-unit-color: var(--editor-foreground-color);
+  --syntax-modifier-color: var(--color-pink-500);
+  --syntax-operator-keyword-color: var(--syntax-keyword-color);
+  --syntax-control-keyword-color: var(--syntax-keyword-color);
+  --syntax-definition-keyword-color: var(--syntax-keyword-color);
+  --syntax-module-keyword-color: var(--syntax-keyword-color);
+  --syntax-keyword-color: var(--color-green-500);
 
-  /* operators ----------------------------------------------------------*/
-  .tok-operator,
-  .tok-deref-operator,
-  .tok-arithmetic-operator,
-  .tok-logic-operator,
-  .tok-bitwise-operator,
-  .tok-compare-operator,
-  .tok-update-operator,
-  .tok-definition-operator,
-  .tok-control-operator {
-    color: var(--color-violet-500);
-  }
+  /* Operators — violet */
+  --syntax-operator-color: var(--color-violet-500);
+  --syntax-deref-operator-color: var(--syntax-operator-color);
+  --syntax-arithmetic-operator-color: var(--syntax-operator-color);
+  --syntax-logic-operator-color: var(--syntax-operator-color);
+  --syntax-bitwise-operator-color: var(--syntax-operator-color);
+  --syntax-compare-operator-color: var(--syntax-operator-color);
+  --syntax-update-operator-color: var(--syntax-operator-color);
+  --syntax-definition-operator-color: var(--syntax-operator-color);
+  --syntax-type-operator-color: var(--editor-foreground-color);
+  --syntax-control-operator-color: var(--syntax-operator-color);
 
-  /* braces, brackets, separators, punctuation -------------------------*/
-  .tok-brace,
-  .tok-square-bracket,
-  .tok-angle-bracket,
-  .tok-paren,
-  .tok-separator,
-  .tok-punctuation {
-    color: var(--color-cyan-500);
-  }
+  /* Punctuation — brackets/separators cyan */
+  --syntax-separator-color: var(--color-cyan-500);
+  --syntax-angle-bracket-color: var(--color-cyan-500);
+  --syntax-square-bracket-color: var(--color-cyan-500);
+  --syntax-paren-color: var(--color-cyan-500);
+  --syntax-brace-color: var(--color-cyan-500);
+  --syntax-bracket-color: var(--editor-foreground-color);
+  --syntax-punctuation-color: var(--color-cyan-500);
 
-  /* HTML/XML tag names -------------------------------------------------*/
-  .tok-tag-name {
-    color: var(--color-blue-500);
-  }
+  /* Headings & prose */
+  --syntax-heading-color: var(--color-yellow-500);
+  --syntax-heading-font-weight: bold;
+  --syntax-heading-1-color: var(--syntax-heading-color);
+  --syntax-heading-1-font-weight: var(--syntax-heading-font-weight);
+  --syntax-heading-2-color: var(--syntax-heading-color);
+  --syntax-heading-2-font-weight: var(--syntax-heading-font-weight);
+  --syntax-heading-3-color: var(--syntax-heading-color);
+  --syntax-heading-3-font-weight: var(--syntax-heading-font-weight);
+  --syntax-heading-4-color: var(--syntax-heading-color);
+  --syntax-heading-4-font-weight: var(--syntax-heading-font-weight);
+  --syntax-heading-5-color: var(--syntax-heading-color);
+  --syntax-heading-5-font-weight: var(--syntax-heading-font-weight);
+  --syntax-heading-6-color: var(--syntax-heading-color);
+  --syntax-heading-6-font-weight: var(--syntax-heading-font-weight);
+  --syntax-content-separator-color: var(--color-neutral-600);
+  --syntax-list-color: var(--editor-foreground-color);
+  --syntax-quote-color: var(--color-neutral-400);
+  --syntax-quote-font-style: italic;
+  --syntax-emphasis-color: var(--color-green-500);
+  --syntax-emphasis-font-style: italic;
+  --syntax-strong-color: var(--color-neutral-200);
+  --syntax-strong-font-weight: bold;
+  --syntax-link-color: var(--color-cyan-500);
+  --syntax-link-text-decoration: underline;
+  --syntax-strikethrough-text-decoration: line-through;
+  --syntax-monospace-color: var(--color-neutral-200); /* base1 */
+  --syntax-content-color: var(--editor-foreground-color);
 
-  /* attribute names ----------------------------------------------------*/
-  .tok-attribute-name {
-    color: var(--color-cyan-500);
-  }
+  /* Diffs & meta */
+  --syntax-inserted-color: var(--color-green-500);
+  --syntax-deleted-color: var(--color-red-500);
+  --syntax-changed-color: var(--color-yellow-500);
+  --syntax-document-meta-color: var(--editor-foreground-color);
+  --syntax-annotation-color: var(--color-orange-500);
+  --syntax-processing-instruction-color: var(--color-green-500);
+  --syntax-meta-color: var(--color-red-500);
 
-  /* strings, regexps ---------------------------------------------------*/
-  .tok-string,
-  .tok-regexp {
-    color: var(--color-yellow-500);
-  }
-
-  /* urls, escapes, special strings, character literals ----------------*/
-  .tok-url,
-  .tok-link.tok-url,
-  .tok-escape,
-  .tok-string.tok-special,
-  .tok-character {
-    color: var(--color-yellow-500);
-  }
-
-  /* links --------------------------------------------------------------*/
-  .tok-link {
-    color: var(--color-cyan-500);
-    text-decoration: underline;
-    text-underline-position: under;
-  }
-
-  /* meta / pre-processor ----------------------------------------------*/
-  .tok-meta {
-    color: var(--color-red-500);
-  }
-
-  /* comments -----------------------------------------------------------*/
-  .tok-comment,
-  .tok-line-comment,
-  .tok-block-comment,
-  .tok-doc-comment {
-    color: var(--color-neutral-600); /* base01 */
-    font-style: italic;
-  }
-
-  /* quotes / block-quotes ---------------------------------------------*/
-  @layer quote {
-    .tok-quote:not(.md-alert) {
-      color: var(--color-neutral-400);
-      font-style: italic;
-    }
-  }
-
-  /* monospace (inline code) -------------------------------------------*/
-  .tok-monospace {
-    color: var(--color-neutral-200); /* base1 */
-  }
-
-  /* emphasis variants --------------------------------------------------*/
-  .tok-strong {
-    color: var(--color-neutral-200);
-    font-weight: bold;
-  }
-  .tok-emphasis {
-    color: var(--color-green-500);
-    font-style: italic;
-  }
-  .tok-strikethrough {
-    text-decoration: line-through;
-  }
-
-  /* headings -----------------------------------------------------------*/
-  .tok-heading,
-  .tok-heading-1,
-  .tok-heading-2,
-  .tok-heading-3,
-  .tok-heading-4,
-  .tok-heading-5,
-  .tok-heading-6 {
-    color: var(--color-yellow-500);
-    font-weight: bold;
-  }
-
-  /* inserted / changed / deleted (diffs) ------------------------------*/
-  .tok-inserted,
-  .tok-processing-instruction {
-    color: var(--color-green-500);
-  }
-  .tok-changed {
-    color: var(--color-yellow-500);
-  }
-  .tok-deleted {
-    color: var(--color-red-500);
-  }
-
-  /* content separator --------------------------------------------------*/
-  .tok-content-separator {
-    color: var(--color-neutral-600);
-  }
-
-  /* invalid / unsyntactic tokens --------------------------------------*/
-  .tok-invalid {
-    color: var(--color-neutral-700); /* base02 */
-    border-bottom: 1px dotted var(--color-red-500);
-  }
-
-  /*──────────────── Markdown token marks ────────────────*/
-  .md-header-mark {
-    opacity: 1;
-  }
-  .md-quote-mark.tok-quote {
-    color: var(--color-cyan-500);
-  }
+  /* Diagnostics — base02 with a dotted red underline */
+  --syntax-invalid-color: var(--color-neutral-700);
+  --syntax-invalid-border-bottom: 1px dotted var(--color-red-500);
 }
