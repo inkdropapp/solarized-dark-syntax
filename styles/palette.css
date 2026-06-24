@@ -1,0 +1,246 @@
+/**
+ * Solarized Dark color palette, exposed as namespaced --*-solarized-* tokens.
+ * These intentionally do NOT override Inkdrop's built-in design tokens
+ * (https://github.com/inkdropapp/css/blob/main/tokens.css); index.css opts in by referencing the
+ * --color-solarized-* / --hsl-solarized-* values.
+ */
+:root {
+  /* Neutral ramp — Solarized base scale */
+  --hsl-solarized-neutral-50: 44deg 87% 94%; /* base3  */
+  --hsl-solarized-neutral-100: 46deg 42% 88%; /* base2  */
+  --hsl-solarized-neutral-200: 180deg 7% 70%; /* base1  */
+  --hsl-solarized-neutral-300: 186deg 8% 65%; /* base0  */
+  --hsl-solarized-neutral-400: 186deg 8% 55%; /* fg     */
+  --hsl-solarized-neutral-500: 196deg 13% 45%; /* base00 */
+  --hsl-solarized-neutral-600: 194deg 14% 40%; /* base01 */
+  --hsl-solarized-neutral-700: 192deg 81% 14%; /* base02 */
+  --hsl-solarized-neutral-800: 192deg 100% 11%; /* base03 */
+  --hsl-solarized-neutral-900: 192deg 100% 8%; /* (intermediate) */
+  --hsl-solarized-neutral-950: 192deg 100% 5%; /* base04 (darkest) */
+
+  /* Blue — primary, links, sidebar selection, note-list date, info */
+  --hsl-solarized-blue-50: 206deg 100% 92.2%;
+  --hsl-solarized-blue-100: 205deg 100% 83%;
+  --hsl-solarized-blue-200: 205deg 95% 73%;
+  --hsl-solarized-blue-300: 205deg 90% 62%;
+  --hsl-solarized-blue-400: 205deg 80% 55%;
+  --hsl-solarized-blue-500: 205deg 69% 49%;
+  --hsl-solarized-blue-600: 205deg 70% 42%;
+  --hsl-solarized-blue-700: 205deg 70% 35%;
+  --hsl-solarized-blue-800: 205deg 70% 28%;
+  --hsl-solarized-blue-900: 205deg 69% 20%;
+  --hsl-solarized-blue-950: 205deg 81% 12.4%;
+
+  /* Cyan */
+  --hsl-solarized-cyan-50: 176deg 100% 94.3%;
+  --hsl-solarized-cyan-100: 176deg 100% 86%;
+  --hsl-solarized-cyan-200: 175deg 92% 70%;
+  --hsl-solarized-cyan-300: 175deg 85% 55%;
+  --hsl-solarized-cyan-400: 175deg 72% 48%;
+  --hsl-solarized-cyan-500: 175deg 59% 40%;
+  --hsl-solarized-cyan-600: 178deg 59% 33%;
+  --hsl-solarized-cyan-700: 182deg 59% 25%;
+  --hsl-solarized-cyan-800: 182deg 58% 20%;
+  --hsl-solarized-cyan-900: 183deg 58% 15%;
+  --hsl-solarized-cyan-950: 182deg 75% 7.84%;
+
+  /* Green — positive, success, diff-added */
+  --hsl-solarized-green-50: 90deg 100% 92.2%;
+  --hsl-solarized-green-100: 90deg 100% 84%;
+  --hsl-solarized-green-200: 83deg 100% 66%;
+  --hsl-solarized-green-300: 76deg 100% 49%;
+  --hsl-solarized-green-400: 72deg 100% 40%;
+  --hsl-solarized-green-500: 68deg 100% 30%;
+  --hsl-solarized-green-600: 68deg 100% 25%;
+  --hsl-solarized-green-700: 68deg 100% 20%;
+  --hsl-solarized-green-800: 68deg 100% 15%;
+  --hsl-solarized-green-900: 68deg 100% 10%;
+  --hsl-solarized-green-950: 68.3deg 100% 5.69%;
+
+  /* Yellow — warning, headings, brown, search */
+  --hsl-solarized-yellow-50: 47deg 100% 91%;
+  --hsl-solarized-yellow-100: 47deg 100% 80%;
+  --hsl-solarized-yellow-200: 46deg 100% 65%;
+  --hsl-solarized-yellow-300: 45deg 100% 50%;
+  --hsl-solarized-yellow-400: 45deg 100% 43%;
+  --hsl-solarized-yellow-500: 45deg 100% 35%;
+  --hsl-solarized-yellow-600: 45deg 100% 28%;
+  --hsl-solarized-yellow-700: 45deg 100% 20%;
+  --hsl-solarized-yellow-800: 45deg 100% 15%;
+  --hsl-solarized-yellow-900: 46deg 100% 10%;
+  --hsl-solarized-yellow-950: 45.5deg 100% 5.69%;
+
+  /* Orange — titles, cursor-line number, diff-new */
+  --hsl-solarized-orange-50: 17.5deg 100% 85.9%;
+  --hsl-solarized-orange-100: 17deg 100% 70%;
+  --hsl-solarized-orange-200: 17deg 97% 61%;
+  --hsl-solarized-orange-300: 17deg 94% 51%;
+  --hsl-solarized-orange-400: 18deg 87% 48%;
+  --hsl-solarized-orange-500: 18deg 80% 44%;
+  --hsl-solarized-orange-600: 18deg 80% 40%;
+  --hsl-solarized-orange-700: 18deg 81% 35%;
+  --hsl-solarized-orange-800: 18deg 80% 28%;
+  --hsl-solarized-orange-900: 18deg 80% 20%;
+  --hsl-solarized-orange-950: 17.9deg 90.5% 12.4%;
+
+  /* Red — negative, error, diff-removed */
+  --hsl-solarized-red-50: 1.3deg 100% 91%;
+  --hsl-solarized-red-100: 1deg 100% 80%;
+  --hsl-solarized-red-200: 1deg 95% 72%;
+  --hsl-solarized-red-300: 1deg 90% 64%;
+  --hsl-solarized-red-400: 1deg 80% 58%;
+  --hsl-solarized-red-500: 1deg 71% 52%;
+  --hsl-solarized-red-600: 1deg 71% 47%;
+  --hsl-solarized-red-700: 1deg 71% 42%;
+  --hsl-solarized-red-800: 1deg 71% 31%;
+  --hsl-solarized-red-900: 1deg 71% 20%;
+  --hsl-solarized-red-950: 1.18deg 83.6% 12%;
+
+  /* Violet — note-list date / todo, spell-cap */
+  --hsl-solarized-violet-50: 237deg 100% 95.9%;
+  --hsl-solarized-violet-100: 236deg 100% 90%;
+  --hsl-solarized-violet-200: 237deg 85% 84%;
+  --hsl-solarized-violet-300: 237deg 69% 77%;
+  --hsl-solarized-violet-400: 237deg 56% 68%;
+  --hsl-solarized-violet-500: 237deg 43% 60%;
+  --hsl-solarized-violet-600: 237deg 43% 55%;
+  --hsl-solarized-violet-700: 237deg 43% 50%;
+  --hsl-solarized-violet-800: 237deg 43% 37%;
+  --hsl-solarized-violet-900: 237deg 42% 25%;
+  --hsl-solarized-violet-950: 237deg 61.1% 14.1%;
+
+  /* Pink — Solarized magenta (no dedicated magenta ramp in v6) */
+  --hsl-solarized-pink-50: 331deg 100% 86.3%;
+  --hsl-solarized-pink-100: 331deg 100% 73%;
+  --hsl-solarized-pink-200: 331deg 93% 68%;
+  --hsl-solarized-pink-300: 331deg 86% 64%;
+  --hsl-solarized-pink-400: 331deg 75% 58%;
+  --hsl-solarized-pink-500: 331deg 64% 52%;
+  --hsl-solarized-pink-600: 331deg 64% 47%;
+  --hsl-solarized-pink-700: 331deg 64% 42%;
+  --hsl-solarized-pink-800: 331deg 64% 31%;
+  --hsl-solarized-pink-900: 331deg 65% 20%;
+  --hsl-solarized-pink-950: 332deg 77.8% 12.4%;
+
+  /*-------------------------------------------------------------
+    --color-solarized-* wrappers — hsl() forms that resolve the
+    --hsl-solarized-* ramps above for direct use as color values.
+  -------------------------------------------------------------*/
+
+  /* Neutral */
+  --color-solarized-neutral-50: hsl(var(--hsl-solarized-neutral-50));
+  --color-solarized-neutral-100: hsl(var(--hsl-solarized-neutral-100));
+  --color-solarized-neutral-200: hsl(var(--hsl-solarized-neutral-200));
+  --color-solarized-neutral-300: hsl(var(--hsl-solarized-neutral-300));
+  --color-solarized-neutral-400: hsl(var(--hsl-solarized-neutral-400));
+  --color-solarized-neutral-500: hsl(var(--hsl-solarized-neutral-500));
+  --color-solarized-neutral-600: hsl(var(--hsl-solarized-neutral-600));
+  --color-solarized-neutral-700: hsl(var(--hsl-solarized-neutral-700));
+  --color-solarized-neutral-800: hsl(var(--hsl-solarized-neutral-800));
+  --color-solarized-neutral-900: hsl(var(--hsl-solarized-neutral-900));
+  --color-solarized-neutral-950: hsl(var(--hsl-solarized-neutral-950));
+
+  /* Blue */
+  --color-solarized-blue-50: hsl(var(--hsl-solarized-blue-50));
+  --color-solarized-blue-100: hsl(var(--hsl-solarized-blue-100));
+  --color-solarized-blue-200: hsl(var(--hsl-solarized-blue-200));
+  --color-solarized-blue-300: hsl(var(--hsl-solarized-blue-300));
+  --color-solarized-blue-400: hsl(var(--hsl-solarized-blue-400));
+  --color-solarized-blue-500: hsl(var(--hsl-solarized-blue-500));
+  --color-solarized-blue-600: hsl(var(--hsl-solarized-blue-600));
+  --color-solarized-blue-700: hsl(var(--hsl-solarized-blue-700));
+  --color-solarized-blue-800: hsl(var(--hsl-solarized-blue-800));
+  --color-solarized-blue-900: hsl(var(--hsl-solarized-blue-900));
+  --color-solarized-blue-950: hsl(var(--hsl-solarized-blue-950));
+
+  /* Cyan */
+  --color-solarized-cyan-50: hsl(var(--hsl-solarized-cyan-50));
+  --color-solarized-cyan-100: hsl(var(--hsl-solarized-cyan-100));
+  --color-solarized-cyan-200: hsl(var(--hsl-solarized-cyan-200));
+  --color-solarized-cyan-300: hsl(var(--hsl-solarized-cyan-300));
+  --color-solarized-cyan-400: hsl(var(--hsl-solarized-cyan-400));
+  --color-solarized-cyan-500: hsl(var(--hsl-solarized-cyan-500));
+  --color-solarized-cyan-600: hsl(var(--hsl-solarized-cyan-600));
+  --color-solarized-cyan-700: hsl(var(--hsl-solarized-cyan-700));
+  --color-solarized-cyan-800: hsl(var(--hsl-solarized-cyan-800));
+  --color-solarized-cyan-900: hsl(var(--hsl-solarized-cyan-900));
+  --color-solarized-cyan-950: hsl(var(--hsl-solarized-cyan-950));
+
+  /* Green */
+  --color-solarized-green-50: hsl(var(--hsl-solarized-green-50));
+  --color-solarized-green-100: hsl(var(--hsl-solarized-green-100));
+  --color-solarized-green-200: hsl(var(--hsl-solarized-green-200));
+  --color-solarized-green-300: hsl(var(--hsl-solarized-green-300));
+  --color-solarized-green-400: hsl(var(--hsl-solarized-green-400));
+  --color-solarized-green-500: hsl(var(--hsl-solarized-green-500));
+  --color-solarized-green-600: hsl(var(--hsl-solarized-green-600));
+  --color-solarized-green-700: hsl(var(--hsl-solarized-green-700));
+  --color-solarized-green-800: hsl(var(--hsl-solarized-green-800));
+  --color-solarized-green-900: hsl(var(--hsl-solarized-green-900));
+  --color-solarized-green-950: hsl(var(--hsl-solarized-green-950));
+
+  /* Yellow */
+  --color-solarized-yellow-50: hsl(var(--hsl-solarized-yellow-50));
+  --color-solarized-yellow-100: hsl(var(--hsl-solarized-yellow-100));
+  --color-solarized-yellow-200: hsl(var(--hsl-solarized-yellow-200));
+  --color-solarized-yellow-300: hsl(var(--hsl-solarized-yellow-300));
+  --color-solarized-yellow-400: hsl(var(--hsl-solarized-yellow-400));
+  --color-solarized-yellow-500: hsl(var(--hsl-solarized-yellow-500));
+  --color-solarized-yellow-600: hsl(var(--hsl-solarized-yellow-600));
+  --color-solarized-yellow-700: hsl(var(--hsl-solarized-yellow-700));
+  --color-solarized-yellow-800: hsl(var(--hsl-solarized-yellow-800));
+  --color-solarized-yellow-900: hsl(var(--hsl-solarized-yellow-900));
+  --color-solarized-yellow-950: hsl(var(--hsl-solarized-yellow-950));
+
+  /* Orange */
+  --color-solarized-orange-50: hsl(var(--hsl-solarized-orange-50));
+  --color-solarized-orange-100: hsl(var(--hsl-solarized-orange-100));
+  --color-solarized-orange-200: hsl(var(--hsl-solarized-orange-200));
+  --color-solarized-orange-300: hsl(var(--hsl-solarized-orange-300));
+  --color-solarized-orange-400: hsl(var(--hsl-solarized-orange-400));
+  --color-solarized-orange-500: hsl(var(--hsl-solarized-orange-500));
+  --color-solarized-orange-600: hsl(var(--hsl-solarized-orange-600));
+  --color-solarized-orange-700: hsl(var(--hsl-solarized-orange-700));
+  --color-solarized-orange-800: hsl(var(--hsl-solarized-orange-800));
+  --color-solarized-orange-900: hsl(var(--hsl-solarized-orange-900));
+  --color-solarized-orange-950: hsl(var(--hsl-solarized-orange-950));
+
+  /* Red */
+  --color-solarized-red-50: hsl(var(--hsl-solarized-red-50));
+  --color-solarized-red-100: hsl(var(--hsl-solarized-red-100));
+  --color-solarized-red-200: hsl(var(--hsl-solarized-red-200));
+  --color-solarized-red-300: hsl(var(--hsl-solarized-red-300));
+  --color-solarized-red-400: hsl(var(--hsl-solarized-red-400));
+  --color-solarized-red-500: hsl(var(--hsl-solarized-red-500));
+  --color-solarized-red-600: hsl(var(--hsl-solarized-red-600));
+  --color-solarized-red-700: hsl(var(--hsl-solarized-red-700));
+  --color-solarized-red-800: hsl(var(--hsl-solarized-red-800));
+  --color-solarized-red-900: hsl(var(--hsl-solarized-red-900));
+  --color-solarized-red-950: hsl(var(--hsl-solarized-red-950));
+
+  /* Violet */
+  --color-solarized-violet-50: hsl(var(--hsl-solarized-violet-50));
+  --color-solarized-violet-100: hsl(var(--hsl-solarized-violet-100));
+  --color-solarized-violet-200: hsl(var(--hsl-solarized-violet-200));
+  --color-solarized-violet-300: hsl(var(--hsl-solarized-violet-300));
+  --color-solarized-violet-400: hsl(var(--hsl-solarized-violet-400));
+  --color-solarized-violet-500: hsl(var(--hsl-solarized-violet-500));
+  --color-solarized-violet-600: hsl(var(--hsl-solarized-violet-600));
+  --color-solarized-violet-700: hsl(var(--hsl-solarized-violet-700));
+  --color-solarized-violet-800: hsl(var(--hsl-solarized-violet-800));
+  --color-solarized-violet-900: hsl(var(--hsl-solarized-violet-900));
+  --color-solarized-violet-950: hsl(var(--hsl-solarized-violet-950));
+
+  /* Pink — Solarized magenta */
+  --color-solarized-pink-50: hsl(var(--hsl-solarized-pink-50));
+  --color-solarized-pink-100: hsl(var(--hsl-solarized-pink-100));
+  --color-solarized-pink-200: hsl(var(--hsl-solarized-pink-200));
+  --color-solarized-pink-300: hsl(var(--hsl-solarized-pink-300));
+  --color-solarized-pink-400: hsl(var(--hsl-solarized-pink-400));
+  --color-solarized-pink-500: hsl(var(--hsl-solarized-pink-500));
+  --color-solarized-pink-600: hsl(var(--hsl-solarized-pink-600));
+  --color-solarized-pink-700: hsl(var(--hsl-solarized-pink-700));
+  --color-solarized-pink-800: hsl(var(--hsl-solarized-pink-800));
+  --color-solarized-pink-900: hsl(var(--hsl-solarized-pink-900));
+  --color-solarized-pink-950: hsl(var(--hsl-solarized-pink-950));
+}

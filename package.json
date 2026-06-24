@@ -4,7 +4,7 @@
   "description": "Solarlized Dark syntax theme for Inkdrop",
   "theme": "syntax",
   "styleSheets": [
-    "tokens.css",
+    "palette.css",
     "index.css"
   ],
   "keywords": [
@@ -18,7 +18,7 @@
     "prepublishOnly": "./node_modules/.bin/generate-palette"
   },
   "devDependencies": {
-    "@inkdropapp/theme-dev-helpers": "^0.5.1"
+    "@inkdropapp/theme-dev-helpers": "^0.5.2"
   },
   "engines": {
     "inkdrop": "^6.x"
